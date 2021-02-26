@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="nasa_logo.svg">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <title>Nasa Open API Project</title>
+</head>
+
+<body>
+    <header class="header">
+        <img src="nasa_logo.svg" class="loading lazy" alt="">
+        <h1>NASA Open API</h1>
+    </header>
+    <main>
+        <!-- ASTRONOMY OF THE DAY -->
+        <div class="inputs">
+            <h3>APOD stands for Astronomy picture of the day</h3>
+            <input id="getAPOD" type="submit" value="Get APOD">
+            <input type="date" id="getAPODDate" name="trip-start" value="2020-01-1" min="2015-01-01" max="2020-12-30">
+        </div>
+        <div id="APOD" class="hide">
+            <img class="APODimage" src="" alt="">
+            <div class="APODdescription">
+                <h3></h3>
+                <h5></h5>
+                <p></p>
+            </div>
+        </div>
+        <hr>
+        <!-- NASA SEARCH  -->
+        <div id="NASAimages">
+            <div class="inputs">
+                <h3>Search NASA's database of photos!</h3>
+                <input id="NASAsearch" type="submit" value="Search">
+                <input id="NASAinput" type="text" palceholder="Search Something!">
+            </div>
+            <div id="NASAimagesWrapper" class="hide">
+                <div id="NASAimagesHolder"></div>
+            </div>
+        </div>
+        <hr>
+        <!-- SATELITE ADDRESS -->
+        <div id="sateliteWrapper">
+            <div class="inputs">
+                <h3>Search for an Address and get a bird's eye view of the area!</h3>
+                <label class="">Enter an Address</label>
+                <input class="" id="AddressSearchInput" type="text"></input>
+                <input id="AddressSearch" value="Search" type="submit">
+                <input type="date" id="date" name="trip-start" value="2020-01-1" min="2015-01-01" max="2020-12-30">
+                <p style="font-weight:200">Unfortunately, this API is slow and cloud coverage is sometimes horrible. Try
+                    chaning the date if it doesn't work well!</p>
+            </div>
+            <div class="sateliteImageHolder hide">
+                <img id="loading" src="loading.gif" />
+                <img id="sateliteImage" />
+            </div>
+        </div>
+        <hr>
+        <!-- EVENTS -->
+        <div class="events">
+            <div class="inputs">
+                <h3>Search for current weather events happening around the world!</h3>
+                <input id="eventSearch" type="submit" value="Search Events">
+            </div>
+            <div id="eventTable" class="table-wrapper hide"></div>
+        </div>
+
+        <footer>
+            <h1>Socials</h1>
+            <a href="">GitHub</a>
+        </footer>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

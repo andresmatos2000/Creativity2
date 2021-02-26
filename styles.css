@@ -1,0 +1,274 @@
+* {
+    font-family: 'Trispace', sans-serif;
+    font-size: 1rem;
+}
+
+input[type="date"] {
+    font-weight: 200;
+}
+
+main {
+    background: #324960;
+    box-shadow: 0px 3px 12px rgb(79, 195, 161);
+}
+
+footer {
+    color: white;
+    background-color: rgb(79, 195, 161);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+a {
+    color: #324960;
+}
+
+a:hover {
+    color: #596d81;
+}
+
+.hide {
+    display: none !important;
+}
+
+.inputs {
+    text-align: center;
+    color: white;
+    padding: 1rem 0rem;
+}
+
+.inputs input {
+    margin-top: .5rem;
+}
+
+/* HEADER */
+.header {
+    height: 50vh;
+    position: relative;
+    box-shadow: 0px 3px 12px rgb(79, 195, 161);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.header img {
+    width: 100vw;
+    height: 100%;
+
+}
+
+.header h1 {
+    position: absolute;
+    bottom: 0%;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    max-width: 100vw;
+    white-space: nowrap;
+}
+
+/* SATELITE  */
+#sateliteWrapper {
+    text-align: center;
+}
+
+.sateliteImageHolder {
+    position: relative;
+    min-height: 12vw;
+}
+
+#loading {
+    position: absolute;
+    height: 10vw;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#sateliteImage {
+    max-width: 30vw;
+    max-height: 30vw;
+    background-color: lightblue;
+    margin-top: .5rem;
+    position: relative;
+}
+
+#APOD {
+    text-align: center;
+    margin-top: 2rem;
+    color: white;
+}
+
+.APODimage {
+    max-height: 50vw;
+    max-width: 100%;
+}
+
+/* NASA Image Search */
+
+#NASAimages {
+    background-color: #324960;
+}
+
+#NASAimagesWrapper {
+    width: 80vw;
+    margin: 1rem auto;
+    max-height: 150vh;
+    overflow-y: scroll;
+}
+
+#NASAimagesHolder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#NASAimagesHolder img {
+    max-width: 20%;
+    max-height: 50vh;
+    margin: .5rem;
+}
+
+@media only screen and (max-width:680px) {
+    #NASAimagesHolder img {
+        max-width: 25%;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    #NASAimagesHolder img {
+        max-width: 100%;
+    }
+}
+
+/* EVENTS */
+.events {
+    padding-bottom: 2rem;
+}
+
+/* TABLE */
+
+.table-wrapper {
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+    max-height: 75vh;
+    overflow-y: scroll;
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: 1px white solid;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td,
+.fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+
+    .table-wrapper:before {
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+
+    .fl-table thead,
+    .fl-table tbody,
+    .fl-table thead th {
+        display: block;
+    }
+
+    .fl-table thead th:last-child {
+        border-bottom: none;
+    }
+
+    .fl-table thead {
+        float: left;
+    }
+
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+
+    .fl-table td,
+    .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
