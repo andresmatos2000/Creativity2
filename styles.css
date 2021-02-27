@@ -10,6 +10,7 @@ input[type="date"] {
 main {
     background: #324960;
     box-shadow: 0px 3px 12px rgb(79, 195, 161);
+    padding: .5rem;
 }
 
 footer {
@@ -17,6 +18,7 @@ footer {
     background-color: rgb(79, 195, 161);
     text-align: center;
     padding: 1.5rem;
+    margin: -.5rem;
 }
 
 a {
